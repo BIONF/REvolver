@@ -1,0 +1,80 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             O11H6_HUMAN.fa
+# target HMM database:             /home/arpit/Downloads/REvolver/examples/hmmdb/Pfam-A.hmm
+# max ASCII text line length:      unlimited
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       O11H6_HUMAN  [L=330]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    2.5e-28   98.6  18.1    4.7e-28   97.7  18.1    1.5  1  7tm_1         7 transmembrane receptor (rhodopsin family)
+    0.00015   20.6  11.1    0.00015   20.6  11.1    2.3  2  7TM_GPCR_Srsx Serpentine type 7TM GPCR chemoreceptor Srsx
+    0.00049   19.0  14.1     0.0011   17.9  14.1    1.5  1  7TM_GPCR_Srv  Serpentine type 7TM GPCR chemoreceptor Srv
+
+
+Domain annotation for each model (and alignments):
+>> 7tm_1  7 transmembrane receptor (rhodopsin family)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.7  18.1   1.2e-31   4.7e-28       1     255 []      59     308 ..      59     308 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  	 score: 97.7 bits;  conditional E-value: 1.2e-31
+                  -----------------------------------------------.------------------------------------------------------------------------------------.............-----------------------------------------------------------------TTTTT---HHHHHTTTSSSHCCCCTCCCHHTTST-----HHHH--------------- CS
+        7tm_1   1 gNllVilvvlrekklrtvtnyflvsLavaDllvlllvmplallyevlgewkfgralCklvvaldvvaltasillltaisiDRYlaitrplkykrkrtkrraavlillvWllsfllslpplllswsnteeeee.............ataclisfpsekvsytllstlvafvlpllvilvlylriyralrkrakklaskrsskrkksskkekkaaktlliivlvfilcwlPffivvllntlcksslvpetllslflwlayvnsclNPiiY 255
+                  gN+ ++++v ++++l+t+++++l++ a+ +++++  ++p +l++ + + ++++  +C l+ ++++ ++t+++++l ++++DRYlai+rpl+y +++t + +++l++++W+ +fl+  +p++l+++ +   ++             a ac+ + ++e   +   ++ ++ + p+l il  y++++ra+    +               + +  a+ ++  +l+++ +++   +v+++++   +       + ++l+++ +++ lNP+iY
+  O11H6_HUMAN  59 GNGAIVCAVKLDRRLHTPMYILLGNFAFLEIWYISSTVPNMLVNILSEIKTISFSGCFLQFYFFFSLGTTECFFLSVMAYDRYLAICRPLHYPSIMTGKFCIILVCVCWVGGFLCYPVPIVLISQLPFCGPNiidhlvcdpgplfALACISAPSTE--LICYTFNSMIIFGPFLSILGSYTLVIRAVLCIPS--------------GAGRTKAFSTCGSHLMVVSLFYGTLMVMYVSPTSGNP--AGMQKIITLVYTAMTPFLNPLIY 308
+                  8**********************************************99**********************************************************************9998888888888999777777666656665554444..4556666667778****************99999..............899999999************************9999..799999***************** PP
+
+>> 7TM_GPCR_Srsx  Serpentine type 7TM GPCR chemoreceptor Srsx
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ? 20.6 7.7 3.9e-08 0.00015 3 113 .. 55 167 .. 53 192 .. 0.82
+   2 ?    0.3   1.3     0.061   2.4e+02     111     176 ..     216     281 ..     210     323 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  	 score: 20.6 bits;  conditional E-value: 3.9e-08
+  7TM_GPCR_Srsx   3 iGliGNliliiltlkkkkLrskcsiLicvqcladllclvgelvfvv.llltdt.qlsreeCflliivyvfgllaqsvliL.iigiDrliavkfPirYrnlekekYllillifpv 113
+                    + l GN  +++++   ++L+++++iL+   ++ ++  ++++++++   +l ++ ++s + Cfl  ++  f+l +  + +L +++ Dr +a++ P+ Y ++ + k+ +il+ ++ 
+    O11H6_HUMAN  55 LTLLGNGAIVCAVKLDRRLHTPMYILLGNFAFLEIWYISSTVPNMLvNILSEIkTISFSGCFLQ-FYFFFSLGTTECFFLsVMAYDRYLAICRPLHYPSIMTGKFCIILVCVCW 167
+                    6789***************************************988345555415666778865.55667777778888835899*******************9999887664 PP
+
+  == domain 2  	 score: 0.3 bits;  conditional E-value: 0.061
+  7TM_GPCR_Srsx 111 fpviysliilvigflerddetvlvCavplalagkafeifklstviinvivllvyivliiilkkkke 176
+                    ++ ++ ++i++  fl +  ++ lv   +l++++ a ++ ++st    ++v+ +++ + ++++ + +
+    O11H6_HUMAN 216 ICYTFNSMIIFGPFLSILGSYTLVIRAVLCIPSGAGRTKAFSTCGSHLMVVSLFYGTLMVMYVSPT 281
+                    556666677777777777777777777777777777777777777777777777777777665555 PP
+
+>> 7TM_GPCR_Srv  Serpentine type 7TM GPCR chemoreceptor Srv
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ? 17.9 9.7 2.7e-07 0.0011 2 136 .. 43 175 .. 42 186 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  	 score: 17.9 bits;  conditional E-value: 2.7e-07
+  7TM_GPCR_Srv   2 yllsivtlplYllili...cllklrkrsktfkttFYklllqhaiaDiitllvyivgavfrklgwieefyielqeyyaaiyyniiyytliirctgivlLslnRllaillPisrltkivqsaklwkivlvywlvgllisl 136
+                    +++ ++l+lYll l+    ++ + k    ++t+ Y ll   a+  i+ +   +  + + +l+ i+ + ++         ++++++ ++ +c   ++++  R+lai++P  ++ +i++ +   + v v w+ g+l + 
+   O11H6_HUMAN  43 SCFFSFILVLYLLTLLgngAIVCAVKLDRRLHTPMYILLGNFAFLEIWYISSTVPNMLVNILSEIKTISFSG----CFLQFYFFFSLGTTECFFLSVMAYDRYLAICRPL-HYPSIMTGKFCIILVCVCWVGGFLCYP 175
+                   678999********9855569999999999******************998888888888887766665443....46789999999***********************.*********************998765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (330 residues searched)
+Target model(s):                       11912  (2158902 nodes)
+Passed MSV filter:                       412  (0.034587); expected 238.2 (0.02)
+Passed bias filter:                      204  (0.0171256); expected 238.2 (0.02)
+Passed Vit filter:                        13  (0.00109134); expected 11.9 (0.001)
+Passed Fwd filter:                         3  (0.000251847); expected 0.1 (1e-05)
+Initial search space (Z):              11912  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.17u 0.07s 00:00:00.24 Elapsed: 00:00:00.15
+# Mc/sec: 4749.58
+//

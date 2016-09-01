@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configdata  xsi:schemaLocation="http://www.cibiv.at/Revolver ./input_schema.xsd" xmlns="http://www.cibiv.at/Revolver" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+	<config>
+		<hmmdb path="hmmdb/Pfam-A.hmm"/>
+		<hmmfetch location="/usr/bin/hmmfetch"/>
+	</config>
+	<model>
+		<substitution name="WAG"/>
+		<indel>
+			<insertion rate="0.1">
+				<length distribution="geometric" p="0.25"/>
+			</insertion>
+			<deletion rate="0.1">
+				<length distribution="geometric" p="0.25"/>
+			</deletion>
+		</indel>
+	</model>
+	<tree>
+	((((C:0.2,B:0.1):0.1,A:0.1):0.1,G:2.0):0.1,((F:1,E:0.5):0.1,D:0.5):0.2);
+	</tree>
+	<root>
+		<randomSequence>
+			<seq length="10"/>
+			<seq name="RLI" perfect="true"/>
+			<seq name="Fer4" perfect="true"/>
+			<seq name="ABC_tran" perfect="true"/>
+			<seq name="ABC_tran" perfect="true"/>
+		</randomSequence>
+	</root>
+	<output>
+		<dir path="results_example2/" separateFastaFiles="true" trueAlignment="false" include="leaf"/>
+		<domains image="true">
+			<hmmscan path="/usr/bin/hmmscan"/>
+		</domains>
+	</output>
+</configdata>

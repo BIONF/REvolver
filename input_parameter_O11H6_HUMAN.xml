@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configdata  xsi:schemaLocation="http://www.cibiv.at/Revolver ./input_schema.xsd" xmlns="http://www.cibiv.at/Revolver" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+	<config>
+		<hmmdb path="hmmdb/Pfam-A.hmm"/>
+		<hmmfetch location="/usr/bin/hmmfetch"/>
+	</config>
+	<model>
+		<substitution name="JTT"/>
+		<indel>
+			<insertion rate="0.025">
+				<length distribution="geometric" p="0.25"/>
+			</insertion>
+			<deletion rate="0.025">
+				<length distribution="geometric" p="0.25"/>
+			</deletion>
+		</indel>
+	</model>
+	<tree path="data/template.tree"  />
+	<root>
+		<inputSequence>
+			<fasta file="data/O11H6_HUMAN.fa"/>
+			<hmmer file="data/O11H6_HUMAN.hmm"/>
+		</inputSequence>
+	</root>
+	<output>
+		<dir path="results_example1/" trueAlignment="true" include="leaf"/>
+	</output>
+</configdata>
